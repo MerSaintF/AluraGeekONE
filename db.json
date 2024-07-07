@@ -1,0 +1,64 @@
+{
+  "products": [
+    {
+      "id": "f2a5b6f3-a0a3-4b3a-97f6-33ec8f0edcf3",
+      "productName": "Forky",
+      "img": "https://funkimia.com/wp-content/uploads/2024/01/funko-pop-forky.webp",
+      "price": 280
+    },
+    {
+      "id": "79393f24-3bbb-401b-9a94-67eccc8f2197",
+      "productName": "Stitch",
+      "img": "https://funkimia.com/wp-content/uploads/2024/02/funko-pop-monster-stitch.webp",
+      "price": 300
+    },
+    {
+      "id": "bdc7c941-7dd8-46b9-a0f3-7c1c62c537c3",
+      "productName": "Rapunzel",
+      "img": "https://funkimia.com/wp-content/uploads/2022/12/funko-pop-rapunzel.webp",
+      "price": 550
+    },
+    {
+      "id": "47c93f01-0119-4586-a353-0d0e2a3a167e",
+      "productName": "Meilin Lee",
+      "img": "https://funkimia.com/wp-content/uploads/2022/12/funko-pop-meilin-lee.webp",
+      "price": 329
+    },
+    {
+      "id": "1989b9f1-dbf8-40cf-9019-a94e172f7515",
+      "productName": "Cenicienta",
+      "img": "https://funkimia.com/wp-content/uploads/2024/02/funko-pop-cinderella-1318-diamond.webp",
+      "price": "380"
+    },
+    {
+      "id": "09fc5f6f-748a-407a-90dd-ed9f4f982bd3",
+      "productName": "Mike Wazowski",
+      "img": "https://funkimia.com/wp-content/uploads/2022/02/funko-pop-mike-wazowski.webp",
+      "price": "290"
+    },
+    {
+      "id": "c718f481-8085-4176-a7be-5b5377602e65",
+      "productName": "Pato Donald",
+      "img": "https://funkimia.com/wp-content/uploads/2021/12/funko-pop-donald-duck-christmas.jpg",
+      "price": "290"
+    },
+    {
+      "id": "2da9f369-9690-42fa-8f2a-b1f02bfa0783",
+      "productName": "Maribel Madrigal",
+      "img": "https://funkimia.com/wp-content/uploads/2022/02/funko-pop-mirabel.webp",
+      "price": "290"
+    },
+    {
+      "id": "1f828bd8-feb4-4f79-b8dc-ef30472a32d3",
+      "productName": "Vanellope",
+      "img": "https://funkimia.com/wp-content/uploads/2022/02/funko-pop-vanellope.webp",
+      "price": "600"
+    },
+    {
+      "id": "fa7403f9-4839-420c-8219-d93172b70686",
+      "productName": "Yeti",
+      "img": "https://funkimia.com/wp-content/uploads/2022/02/funko-pop-yeti.jpg",
+      "price": "270"
+    }
+  ]
+}
