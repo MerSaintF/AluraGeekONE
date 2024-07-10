@@ -1,12 +1,6 @@
 {
   "products": [
     {
-      "id": "f2a5b6f3-a0a3-4b3a-97f6-33ec8f0edcf3",
-      "productName": "Forky",
-      "img": "https://funkimia.com/wp-content/uploads/2024/01/funko-pop-forky.webp",
-      "price": 280
-    },
-    {
       "id": "79393f24-3bbb-401b-9a94-67eccc8f2197",
       "productName": "Stitch",
       "img": "https://funkimia.com/wp-content/uploads/2024/02/funko-pop-monster-stitch.webp",
@@ -23,12 +17,6 @@
       "productName": "Meilin Lee",
       "img": "https://funkimia.com/wp-content/uploads/2022/12/funko-pop-meilin-lee.webp",
       "price": 329
-    },
-    {
-      "id": "1989b9f1-dbf8-40cf-9019-a94e172f7515",
-      "productName": "Cenicienta",
-      "img": "https://funkimia.com/wp-content/uploads/2024/02/funko-pop-cinderella-1318-diamond.webp",
-      "price": "380"
     },
     {
       "id": "09fc5f6f-748a-407a-90dd-ed9f4f982bd3",
@@ -59,6 +47,12 @@
       "productName": "Yeti",
       "img": "https://funkimia.com/wp-content/uploads/2022/02/funko-pop-yeti.jpg",
       "price": "270"
+    },
+    {
+      "id": "15aa61f4-ab74-4fdd-9457-d645c63ddf22",
+      "productName": "Princesa Leia",
+      "img": "https://m.media-amazon.com/images/I/61p1tVCll0L._AC_SY450_.jpg",
+      "price": "500"
     }
   ]
 }

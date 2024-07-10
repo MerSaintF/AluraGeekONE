@@ -1,14 +1,25 @@
 const cardContainer = document.querySelector(".contenedor--products");
 7;
 
+const agregarCard = document.querySelector(".agregar--productos");
+const cerrarForm = document.querySelector(".cerrar--form");
+
 function handleImageError(event) {
   event.target.src = "assets/no-image.png";
-  
 }
 
 const clearBtn = document.querySelector('[data-action="clear"]');
 
 const form = document.querySelector(".form");
+const formContainer = document.querySelector(".contenedor--form");
+
+agregarCard.addEventListener("click", () => {
+  formContainer.classList.toggle("disabled");
+});
+
+cerrarForm.addEventListener("click", () => {
+  formContainer.classList.toggle("disabled");
+});
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -44,10 +55,13 @@ const postData = async (url, obj) => {
 const displayProducts = function () {
   getData("/products")
     .then((data) => {
-      data.forEach((cardInfo) => {
-        const { id, productName, img, price } = cardInfo;
-
-        let card = `
+      if (data.length == 0) {
+        throw new Error("No hay ningún producto registrado")
+      } else {
+        //si hay data, desplegarla
+        data.forEach((cardInfo) => {
+          const { id, productName, img, price } = cardInfo;
+          let card = `
           <div class="card" data-id="${id}">
             <div class="card--img">
               <img src="${img}" alt="funko-${productName}" onerror="handleImageError(event)">
@@ -55,13 +69,16 @@ const displayProducts = function () {
             <div class="card--info">
               <p>${productName}</p>
               <p>$${price}</p>
-              <img src="assets/trash3.svg" data-action="delete" alt="eliminar">
+              <img src="assets/trash3.svg" title="Eliminar producto" data-action="delete" alt="eliminar">
             </div>
           </div>`;
-        cardContainer.insertAdjacentHTML("beforeend", card);
-      });
+          cardContainer.insertAdjacentHTML("beforeend", card);
+        });
+      }
     })
-    .catch((err) => console.log(err));
+    .catch((err) => {
+      cardContainer.insertAdjacentHTML("beforeend", `<p class="warning" >¡Ups, no hay productos registrados aún!</p>`);
+      console.log(err)});
 };
 
 document.addEventListener("DOMContentLoaded", displayProducts);

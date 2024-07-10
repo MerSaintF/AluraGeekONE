@@ -22,8 +22,45 @@
 
     <main>
       <div class="contenedor--principal">
+        <section class="contenedor--form">
+          <img
+            src="assets/close.svg"
+            class="cerrar--form"
+            alt="cerrar"
+            title="Cerrar formulario"
+          />
+          <!-- <h2 class="section--title">Agregar productos</h2> -->
+          <form class="form">
+            <div class="inputField">
+              <label for="nombre">Nombre del producto:</label>
+              <input type="text" id="name" required minlength="4" />
+            </div>
+            <div class="inputField">
+              <label for="precio">Precio:</label>
+              <input type="number" id="price" required min="100" />
+            </div>
+            <div class="inputField">
+              <label for="img">URL de imagen:</label>
+              <input type="url" id="img" required />
+            </div>
+            <div class="botones">
+              <button type="button" data-action="clear">Limpiar</button>
+              <button type="submit">Agregar</button>
+            </div>
+          </form>
+        </section>
+
         <section class="contenedor--cards">
-          <h2 class="section--title">Mis productos</h2>
+          <div class="a">
+            <h2 class="section--title">Mis productos</h2>
+            <img
+              class="agregar--productos"
+              title="Añadir productos"
+              src="assets/add.svg"
+              alt="agregar productos"
+            />
+          </div>
+
           <div class="contenedor--products">
             <!-- <div class="card" data-id="1">
                  <div class="card--img">
@@ -36,28 +73,6 @@
                 </div> 
             </div> -->
           </div>
-        </section>
-
-        <section class="contenedor--form">
-          <h2 class="section--title">Agregar productos</h2>
-          <form class="form">
-            <div class="inputField">
-              <label for="nombre">Nombre del producto:</label>
-              <input type="text" id="name" required minlength="4" />
-            </div>
-            <div class="inputField">
-              <label for="precio">Precio:</label>
-              <input type="number" id="price" required />
-            </div>
-            <div class="inputField">
-              <label for="img">URL de imagen:</label>
-              <input type="url" id="img" required />
-            </div>
-            <div class="botones">
-              <button type="button" data-action="clear">Limpiar</button>
-              <button type="submit">Guardar</button>
-            </div>
-          </form>
         </section>
       </div>
     </main>
