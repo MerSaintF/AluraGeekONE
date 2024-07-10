@@ -1,6 +1,6 @@
 :root {
   --main-color: rgb(197, 180, 255);
-  --secondary-color: rgb(210, 255, 168);
+  --secondary-color: rgb(225, 255, 196);
   --background-color: rgb(236, 236, 236);
 }
 
@@ -54,7 +54,6 @@ h2,
 p {
   text-align: center;
 }
-
 
 .card {
   width: 200px;
@@ -165,12 +164,11 @@ button {
   transition: scale 0.3s ease;
 }
 
-.cerrar--form:hover{
+.cerrar--form:hover {
   scale: 1.1;
 }
 
-
-.warning{
+.warning {
   font-size: x-large;
   color: #f29a5f;
 }

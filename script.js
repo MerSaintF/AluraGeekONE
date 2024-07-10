@@ -1,3 +1,5 @@
+import { getData, postData, deleteData } from "./api.js";
+
 const cardContainer = document.querySelector(".contenedor--products");
 7;
 
@@ -30,33 +32,11 @@ clearBtn.addEventListener("click", function () {
   form.reset();
 });
 
-const api = axios.create({
-  baseURL: "http://localhost:8000",
-});
-
-const getData = async (url) => {
-  const res = await api.get(url);
-  const data = res.data;
-  return data;
-};
-
-const deleteData = async (url) => {
-  const res = await api.delete(url);
-  const data = res.data;
-  return data;
-};
-
-const postData = async (url, obj) => {
-  const res = await api.post(url, obj);
-  const data = res.data;
-  return data;
-};
-
 const displayProducts = function () {
   getData("/products")
     .then((data) => {
       if (data.length == 0) {
-        throw new Error("No hay ningún producto registrado")
+        throw new Error("No hay ningún producto registrado");
       } else {
         //si hay data, desplegarla
         data.forEach((cardInfo) => {
@@ -77,8 +57,12 @@ const displayProducts = function () {
       }
     })
     .catch((err) => {
-      cardContainer.insertAdjacentHTML("beforeend", `<p class="warning" >¡Ups, no hay productos registrados aún!</p>`);
-      console.log(err)});
+      cardContainer.insertAdjacentHTML(
+        "beforeend",
+        `<p class="warning" >¡Ups! Ocurrió un error, o no hay productos registrados aún</p>`
+      );
+      console.log(err);
+    });
 };
 
 document.addEventListener("DOMContentLoaded", displayProducts);
