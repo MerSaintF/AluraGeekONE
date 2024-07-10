@@ -1,5 +1,5 @@
 export const api = axios.create({
-  baseURL: "http://localhost:8000",
+  baseURL: "https://alura-geek-one-iota.vercel.app",
 });
 
 export const getData = async (url) => {
