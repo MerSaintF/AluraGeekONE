@@ -6,10 +6,6 @@ const cardContainer = document.querySelector(".contenedor--products");
 const agregarCard = document.querySelector(".agregar--productos");
 const cerrarForm = document.querySelector(".cerrar--form");
 
-function handleImageError(event) {
-  event.target.src = "assets/no-image.png";
-}
-
 const clearBtn = document.querySelector('[data-action="clear"]');
 
 const form = document.querySelector(".form");
@@ -32,6 +28,13 @@ clearBtn.addEventListener("click", function () {
   form.reset();
 });
 
+const handleImageError = function (event) {
+  console.log(event);
+  event.target.src = "assets/no-image.png";
+};
+
+window.handleImageError = handleImageError;
+
 const displayProducts = function () {
   getData("/products")
     .then((data) => {
@@ -44,7 +47,7 @@ const displayProducts = function () {
           let card = `
           <div class="card" data-id="${id}">
             <div class="card--img">
-              <img src="${img}" alt="funko-${productName}" onerror="handleImageError(event)">
+              <img src="${img}" alt="funko-${productName}"  onerror="handleImageError(event)">
             </div>
             <div class="card--info">
               <p>${productName}</p>
