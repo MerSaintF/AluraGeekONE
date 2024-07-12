@@ -79,7 +79,7 @@ cardContainer.addEventListener("click", (e) => {
       .finally(() => {
         setTimeout(() => {
           location.reload(true);
-        }, 2000);
+        }, 1000);
       });
   }
 });
@@ -92,5 +92,9 @@ form.addEventListener("submit", () => {
 
   postData("/products", { id, productName, img, price })
     .catch((err) => console.log(err))
-    .finally(location.reload(true));
+    .finally(() => {
+      setTimeout(() => {
+        location.reload(true);
+      }, 2000);
+    });
 });
