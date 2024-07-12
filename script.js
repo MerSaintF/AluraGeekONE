@@ -38,6 +38,7 @@ window.handleImageError = handleImageError;
 const displayProducts = function () {
   getData("/products")
     .then((data) => {
+      cardContainer.innerHTML = "";
       if (data.length == 0) {
         throw new Error("No hay ningún producto registrado");
       } else {
@@ -73,7 +74,9 @@ document.addEventListener("DOMContentLoaded", displayProducts);
 cardContainer.addEventListener("click", (e) => {
   if (e.target.dataset.action == "delete") {
     const id = e.target.parentElement.parentElement.dataset.id;
-    deleteData(`/products/${id}`).catch((err) => console.log(err));
+    deleteData(`/products/${id}`)
+      .catch((err) => console.log(err))
+      .finally(location.reload(true));
   }
 });
 
@@ -83,7 +86,7 @@ form.addEventListener("submit", () => {
   const price = document.getElementById("price").value;
   const id = uuid.v4();
 
-  postData("/products", { id, productName, img, price }).catch((err) =>
-    console.log(err)
-  );
+  postData("/products", { id, productName, img, price })
+    .catch((err) => console.log(err))
+    .finally(location.reload(true));
 });
