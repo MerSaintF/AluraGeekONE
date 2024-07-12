@@ -76,7 +76,11 @@ cardContainer.addEventListener("click", (e) => {
     const id = e.target.parentElement.parentElement.dataset.id;
     deleteData(`/products/${id}`)
       .catch((err) => console.log(err))
-      .finally(location.reload(true));
+      .finally(() => {
+        setTimeout(() => {
+          location.reload(true);
+        }, 2000);
+      });
   }
 });
 
