@@ -73,9 +73,7 @@ document.addEventListener("DOMContentLoaded", displayProducts);
 cardContainer.addEventListener("click", (e) => {
   if (e.target.dataset.action == "delete") {
     const id = e.target.parentElement.parentElement.dataset.id;
-    deleteData(`/products/${id}`)
-      .then(location.reload(true))
-      .catch((err) => console.log(err));
+    deleteData(`/products/${id}`).catch((err) => console.log(err));
   }
 });
 
@@ -85,7 +83,7 @@ form.addEventListener("submit", () => {
   const price = document.getElementById("price").value;
   const id = uuid.v4();
 
-  postData("/products", { id, productName, img, price })
-    .then(location.reload(true))
-    .catch((err) => console.log(err));
+  postData("/products", { id, productName, img, price }).catch((err) =>
+    console.log(err)
+  );
 });
